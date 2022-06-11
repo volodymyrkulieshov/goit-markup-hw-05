@@ -13,7 +13,8 @@
   --footer-bgc: #2f303a;
   --border-header: #ececec;
   --hero-bgc: #c4c4c4;
-  --icon-color: #757575;
+  --icon-color: #afb1b8;
+  --filter-bgc: #f5f4fa;
   --timing-duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -156,7 +157,7 @@ button {
 .current::after {
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -2px;
   content: '';
   display: block;
   width: 100%;
@@ -191,7 +192,7 @@ button {
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: var(--icon-color);
+  color: var(--basic-color);
   transition: color var(--timing-duration) var(--timing-function);
 }
 
@@ -458,14 +459,19 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  fill: currentColor;
+  color: var(--icon-color);
   transition: background-color var(--timing-duration) var(--timing-function),
-    fill var(--timing-duration) var(--timing-function);
+    color var(--timing-duration) var(--timing-function);
 }
+
+.soc-icon {
+  fill: currentColor;
+}
+
 .employeer-soc-list .soc-item .soc-link:hover,
 .employeer-soc-list .soc-item .soc-link:focus {
   background-color: var(--brand-accent);
-  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
 }
 /* ---------------------CLIENTS--------------------------- */
 
@@ -492,16 +498,20 @@ button {
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
-  fill: currentColor;
-  transition: fill var(--timing-duration) var(--timing-function),
+  color: var(--icon-color);
+  transition: color var(--timing-duration) var(--timing-function),
     border-color var(--timing-duration) var(--timing-function);
+}
+
+.clients-icon {
+  fill: currentColor;
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  fill: var(--brand-accent);
+  color: var(--brand-accent);
   border-color: var(--brand-accent);
 }
 
@@ -598,14 +608,16 @@ button {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  fill: var(--primary-white-color);
+  color: var(--primary-white-color);
   transition: background-color var(--timing-duration) var(--timing-function);
 }
 .soc-link:hover,
 .soc-link:focus {
   background-color: var(--brand-accent);
 }
-
+.soc-icon {
+  fill: currentColor;
+}
 /* ____________PORTFOLIO______________________________ */
 
 .examples {
@@ -641,7 +653,7 @@ button {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  background-color: #f5f4fa;
+  background-color: var(--filter-bgc);
   color: var(--title-color);
   padding: 6px 22px;
   border-radius: 4px;
