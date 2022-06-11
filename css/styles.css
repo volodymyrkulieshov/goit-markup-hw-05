@@ -157,7 +157,7 @@ button {
 .current::after {
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -1px;
   content: '';
   display: block;
   width: 100%;
